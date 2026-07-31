@@ -19,7 +19,7 @@
 
 
 import turtle
-import time
+
 
 
 
