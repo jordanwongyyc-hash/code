@@ -18,6 +18,10 @@ class Dog:
             return self.name + " is sitting"
         else:
             return self.name + " is not sitting"
+    def __str__(self):
+        return (f'name:{self.name}| Age: {self.age}| Tricks {self.tricks}| state: {self.get_state()}')
+
+
 
 ToTo = Dog("ToTo",1)
 
@@ -33,9 +37,17 @@ print(ToTo.name)
 ToTo.learn_trick("Sitting")
 
 print(ToTo.tricks)
-hjbbhjgyj
+
 ToTo.sit_down()
 
 print(ToTo.isSitting)
 
 print(ToTo.get_state())
+
+print(ToTo)
+
+Cat = Dog("cat",0)
+
+print(Cat.name)
+
+print(Cat.age)
