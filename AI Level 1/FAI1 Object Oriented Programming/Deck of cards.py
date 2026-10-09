@@ -31,16 +31,29 @@ class Deck:
             output += f"{i}\n"
         return output
     def drawcard(self):
-        if len(self.deck) < 0
+        if len(self.deck) <= 0:
             return"You cant draw, there is nothing in the deck"
         else:
             return self.deck.pop(0)
 
     def shuffledeck(self):
-        rcard = random.randint(0-51)
-        cardshuf = self.deck.pop(self,rcard)
-        
+        for i in range(52):
+            rcard = random.randint(0,51)
+            tempcard = self.deck[i]
+            self.deck[i] = self.deck[rcard]
+            self.deck[rcard] = tempcard
+
+
+
+
+
 
 Casinodeck = Deck()
 
+Casinodeck.shuffledeck()
 
+print(Casinodeck)
+for i in range(52):
+    print(Casinodeck.drawcard())
+
+print(Casinodeck.drawcard())
